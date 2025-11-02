@@ -1,0 +1,9 @@
+services:
+  dashboard:
+    build: ./dashboard
+    container_name: shein_dashboard
+    restart: unless-stopped
+    environment:
+      API_URL: http://localhost:8000
+    ports:
+      - "8501:8501"
